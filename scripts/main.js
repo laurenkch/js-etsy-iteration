@@ -17,15 +17,19 @@
 //   }
 // getAverage(items);
 
+const average = _.meanBy(items, function(obj) {return obj.price; }).toFixed(2);
 
-const total = items.map(function(item) {
-    return item.price;
-}).reduce(function(total, current) {
-    return total + current;
-});
+// const total = items.map(function(item) {
+//     return item.price;
+// })
+// .reduce(function(total, current) {
+//     return total + current;
+// });
 
-const average = (total / items.length).toFixed(2);
+// const average = (total / items.length).toFixed(2);
 console.log(`The average price is $${average}`);
+
+
 
 //ITEMS BETWEEN $14 AND $18
 
